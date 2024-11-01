@@ -195,7 +195,7 @@ def getData(gw_test_tot, sourcekey, targetkey, filter_prop):
 def savedata(data, h1name, filename):
     src_name = np.array(data[0])[data[3]['source'].values]
     trg_name = np.array(data[0])[data[3]['target'].values]
-    df = data[4].copy()
+    df = data[1].copy()
     df['source'] = src_name
     df['target'] = trg_name
     df = df.rename(columns={"value": "Number of cells"})
